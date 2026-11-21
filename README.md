@@ -9,6 +9,21 @@ Regras de segurança perimetral e mitigação de ameaças na borda para Cloudfla
 
 Desenvolvido e mantido pela equipe de engenharia de segurança perimetral da **[TAVARDT Brasil](https://ag.tavardt.com/br/ciberseguranca/)**.
 
+> [!IMPORTANT]
+> **Arquitetura Universal & Agnóstica de Stack:** Este repositório **não é restrito ao WordPress**. Ele foi projetado para blindar **APIs RESTful, microsserviços modernos, SPAs (Next.js, React, Vue) e backends corporativos (Node.js, Python, Go, Laravel, Java)**. O bloqueio de sondas legadas de CMS atua como uma **camada de higiene perimetral ativa**, descartando o ruído cego de botnets na rede da Cloudflare (< 1ms) antes que qualquer requisição maliciosa consuma conexões TCP, memória ou CPU do seu servidor de origem.
+
+---
+
+### Matriz de Proteção Multi-Stack
+
+| Camada de Defesa | Vetores Mitigados | Aplicações & Stacks Protegidas |
+| :--- | :--- | :--- |
+| **Isolamento de Credenciais** | Bloqueio de `.env`, `.git`, `.sql`, `package.json`, `composer.json` | **APIs, Next.js, Node.js, Python, Go, Laravel, React** |
+| **Mitigação de Reconhecimento** | Bloqueio de Nikto, SQLMap, Acunetix, Masscan, Gobuster, Nmap | **Qualquer web app, microsserviço ou gateway de API** |
+| **Higiene de Verbos HTTP** | Rejeição de métodos não seguros (`TRACE`, `TRACK`, `DEBUG`) | **APIs RESTful e microsserviços de produção** |
+| **Gating de Autenticação** | Desafio gerenciado em rotas sensíveis (`/admin`, `/wp-login.php`) | **Dashboards administrativos, ERPs web e consolas** |
+| **Higiene de Ruído Cego** | Descarte na borda de sondas de CMS (`/xmlrpc.php`, trackbacks) | **Alívio imediato de carga de CPU em servidores de origem** |
+
 ---
 
 ## 1. Visão Geral da Arquitetura Perimetral
