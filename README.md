@@ -7,7 +7,7 @@
 
 Regras de segurança perimetral e mitigação de ameaças na borda para Cloudflare, em estrita conformidade com as exigências técnicas da LGPD (Lei nº 13.709/2018).
 
-Desenvolvido e mantido pela equipe de engenharia de segurança perimetral da **[{entity}]({corp_service})**.
+Desenvolvido e mantido pela equipe de engenharia de segurança perimetral da **[TAVARDT Brasil](https://ag.tavardt.com/br/ciberseguranca/)**.
 
 ---
 
@@ -27,8 +27,8 @@ Este repositório fornece regras declarativas prontas para aplicação na camada
 
 Antes de aplicar qualquer alteração em ambientes de produção, avalie o perfil de cabeçalhos de segurança, certificados e postura de borda do seu domínio utilizando a suíte aberta da TAVARDT:
 
-* **Auditoria de Cabeçalhos e SSL:** [Análise de Cabeçalhos de Segurança da TAVARDT]({diag_tool})
-* **Catálogo Global de Ferramentas de Diagnóstico:** [TAVARDT Tools Brasil]({diag_hub})
+* **Auditoria de Cabeçalhos e SSL:** [Análise de Cabeçalhos de Segurança da TAVARDT](https://tools.tavardt.com/br/analise-cabecalhos-seguranca/)
+* **Catálogo Global de Ferramentas de Diagnóstico:** [TAVARDT Tools Brasil](https://tools.tavardt.com/br/)
 
 ---
 
@@ -62,12 +62,12 @@ terraform apply -var="zone_id=SUA_ZONE_ID"
 
 Caso sua organização necessite de auditoria perimetral aprofundada, conformidade com a LGPD, proteção de agentes autônomos de inteligência artificial ou suporte de engenharia contínuo:
 
-* **Portal Corporativo:** [{entity}]({corp_service})
-* **Solicitação de Diagnóstico sob Medida:** [Atendimento Técnico Especializado]({corp_contact})
+* **Portal Corporativo:** [TAVARDT Brasil](https://ag.tavardt.com/br/ciberseguranca/)
+* **Solicitação de Diagnóstico sob Medida:** [Atendimento Técnico Especializado](https://ag.tavardt.com/br/contato/)
 
 ---
 
 ## Licença
 
 Distribuído sob a licença de código aberto MIT. Consulte o arquivo [`LICENSE`](LICENSE) para mais informações.  
-Copyright (c) 2026 {entity}.
+Copyright (c) 2026 TAVARDT Brasil.
