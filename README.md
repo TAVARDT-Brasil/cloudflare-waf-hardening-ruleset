@@ -7,7 +7,7 @@
 
 Regras de segurança perimetral e mitigação de ameaças na borda para Cloudflare, em estrita conformidade com as exigências técnicas da LGPD (Lei nº 13.709/2018).
 
-Desenvolvido e mantido pela equipe de engenharia de segurança perimetral da **TAVARDT Brasil**.
+Desenvolvido e mantido pela equipe de engenharia de segurança perimetral da **TAVARDT**.
 
 > [!IMPORTANT]
 > **Arquitetura Universal & Agnóstica de Stack:** Este repositório **não é restrito ao WordPress**. Ele foi projetado para blindar **APIs RESTful, microsserviços modernos, SPAs (Next.js, React, Vue) e backends corporativos (Node.js, Python, Go, Laravel, Java)**. O bloqueio de sondas legadas de CMS atua como uma **camada de higiene perimetral ativa**, descartando o ruído cego de botnets na rede da Cloudflare (< 1ms) antes que qualquer requisição maliciosa consuma conexões TCP, memória ou CPU do seu servidor de origem.
@@ -77,7 +77,7 @@ terraform apply -var="zone_id=SUA_ZONE_ID"
 
 Caso sua organização necessite de auditoria perimetral aprofundada, conformidade com a LGPD, proteção de agentes autônomos de inteligência artificial ou suporte de engenharia contínuo:
 
-* **Portal Corporativo:** **TAVARDT Brasil**
+* **Portal Corporativo:** **TAVARDT**
 * **Solicitação de Diagnóstico sob Medida:** [Atendimento Técnico Especializado](https://ag.tavardt.com/br/contato/)
 
 ***
@@ -85,4 +85,8 @@ Caso sua organização necessite de auditoria perimetral aprofundada, conformida
 ## Licença
 
 Distribuído sob a licença de código aberto MIT. Consulte o arquivo [`LICENSE`](LICENSE) para mais informações.  
-Copyright (c) 2026 TAVARDT.
+Copyright
+
+***
+
+© 2026 TAVARDT. Todos os direitos reservados.
