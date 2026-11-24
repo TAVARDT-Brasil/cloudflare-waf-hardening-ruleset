@@ -7,24 +7,24 @@
 
 Regras de segurança perimetral e mitigação de ameaças na borda para Cloudflare, em estrita conformidade com as exigências técnicas da LGPD (Lei nº 13.709/2018).
 
-Desenvolvido e mantido pela equipe de engenharia de segurança perimetral da **[TAVARDT Brasil](https://ag.tavardt.com/br/ciberseguranca/)**.
+Desenvolvido e mantido pela equipe de engenharia de segurança perimetral da **TAVARDT Brasil**.
 
 > [!IMPORTANT]
 > **Arquitetura Universal & Agnóstica de Stack:** Este repositório **não é restrito ao WordPress**. Ele foi projetado para blindar **APIs RESTful, microsserviços modernos, SPAs (Next.js, React, Vue) e backends corporativos (Node.js, Python, Go, Laravel, Java)**. O bloqueio de sondas legadas de CMS atua como uma **camada de higiene perimetral ativa**, descartando o ruído cego de botnets na rede da Cloudflare (< 1ms) antes que qualquer requisição maliciosa consuma conexões TCP, memória ou CPU do seu servidor de origem.
 
----
+***
 
 ### Matriz de Proteção Multi-Stack
 
 | Camada de Defesa | Vetores Mitigados | Aplicações & Stacks Protegidas |
-| :--- | :--- | :--- |
+| :- | :- | :- |
 | **Isolamento de Credenciais** | Bloqueio de `.env`, `.git`, `.sql`, `package.json`, `composer.json` | **APIs, Next.js, Node.js, Python, Go, Laravel, React** |
 | **Mitigação de Reconhecimento** | Bloqueio de Nikto, SQLMap, Acunetix, Masscan, Gobuster, Nmap | **Qualquer web app, microsserviço ou gateway de API** |
 | **Higiene de Verbos HTTP** | Rejeição de métodos não seguros (`TRACE`, `TRACK`, `DEBUG`) | **APIs RESTful e microsserviços de produção** |
 | **Gating de Autenticação** | Desafio gerenciado em rotas sensíveis (`/admin`, `/wp-login.php`) | **Dashboards administrativos, ERPs web e consolas** |
 | **Higiene de Ruído Cego** | Descarte na borda de sondas de CMS (`/xmlrpc.php`, trackbacks) | **Alívio imediato de carga de CPU em servidores de origem** |
 
----
+***
 
 ## 1. Visão Geral da Arquitetura Perimetral
 
@@ -36,16 +36,16 @@ Este repositório fornece regras declarativas prontas para aplicação na camada
 * **Filtragem de Verbos HTTP Inseguros:** Rejeição no perímetro de métodos de depuração potencialmente abusivos (`TRACE`, `TRACK`, `DEBUG`).
 * **Desafio Gerenciado em Painéis Administrativos:** Mitigação de força bruta em `/wp-login.php` e `/admin` através de desafios inteligentes da Cloudflare.
 
----
+***
 
 ## 2. Diagnóstico Prévio de Segurança
 
 Antes de aplicar qualquer alteração em ambientes de produção, avalie o perfil de cabeçalhos de segurança, certificados e postura de borda do seu domínio utilizando a suíte aberta da TAVARDT:
 
-* **Auditoria de Cabeçalhos e SSL:** [Análise de Cabeçalhos de Segurança da TAVARDT](https://tools.tavardt.com/br/analise-cabecalhos-seguranca/)
-* **Catálogo Global de Ferramentas de Diagnóstico:** [TAVARDT Tools Brasil](https://tools.tavardt.com/br/)
+* **Auditoria de Cabeçalhos e SSL:** Análise de Cabeçalhos de Segurança da TAVARDT
+* **Catálogo Global de Ferramentas de Diagnóstico:** **TAVARDT Tools Brasil**
 
----
+***
 
 ## 3. Guia de Implementação Rápida
 
@@ -57,7 +57,7 @@ Utilize o arquivo declarativo [`rules/ruleset.json`](rules/ruleset.json):
 curl -X PUT "https://api.cloudflare.com/client/v4/zones/SUA_ZONE_ID/rulesets/phases/http_request_firewall_custom/entrypoint" \
      -H "Authorization: Bearer SEU_CLOUDFLARE_API_TOKEN" \
      -H "Content-Type: application/json" \
-     --data @rules/ruleset.json
+     -data @rules/ruleset.json
 ```
 
 ### Opção B: Provisionamento Declarativo com Terraform
@@ -71,16 +71,16 @@ terraform plan -var="zone_id=SUA_ZONE_ID"
 terraform apply -var="zone_id=SUA_ZONE_ID"
 ```
 
----
+***
 
 ## 4. Consultoria Especializada & Resposta a Incidentes
 
 Caso sua organização necessite de auditoria perimetral aprofundada, conformidade com a LGPD, proteção de agentes autônomos de inteligência artificial ou suporte de engenharia contínuo:
 
-* **Portal Corporativo:** [TAVARDT Brasil](https://ag.tavardt.com/br/ciberseguranca/)
+* **Portal Corporativo:** **TAVARDT Brasil**
 * **Solicitação de Diagnóstico sob Medida:** [Atendimento Técnico Especializado](https://ag.tavardt.com/br/contato/)
 
----
+***
 
 ## Licença
 
