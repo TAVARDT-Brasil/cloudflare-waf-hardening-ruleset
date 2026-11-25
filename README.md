@@ -83,13 +83,6 @@ Caso sua organização necessite de auditoria perimetral aprofundada, conformida
 
 ***
 
-## Licença
-
-Distribuído sob a licença de código aberto MIT. Consulte o arquivo [`LICENSE`](LICENSE) para mais informações.  
-Copyright
-
-***
-
 ## Links Úteis
 
 * **Portal Corporativo:** https://ag.tavardt.com/br/
